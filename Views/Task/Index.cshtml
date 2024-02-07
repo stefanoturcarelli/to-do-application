@@ -1,0 +1,82 @@
+﻿@model List<ToDoApplication.Models.TaskItem>
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>To-Do Application</title>
+    <link rel="stylesheet" href="~/Content/Reset.css">
+    <link rel="stylesheet" href="~/Content/Index.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="container">
+            <div>
+
+                <h1>To-Do Application</h1>
+            </div>
+            <div>
+                @using (Html.BeginForm("AddTask", "Task"))
+                {
+                    <div>
+                        <h2>Add new tasks here: </h2>
+                    </div>
+                    <div>
+                        <table>
+                            <tr>
+                                <td>Title: </td>
+                                <td>@Html.TextBox("Title", null)</td>
+                            </tr>
+                            <tr>
+                                <td>Description: </td>
+                                <td>@Html.TextBox("Description", null)</td>
+                            </tr>
+                            <tr>
+                                <td>Due Date: </td>
+                                <td>@Html.TextBox("DueDate", null, new { type = "date" })</td>
+                            </tr>
+                            <tr>
+                                <td>Is Completed: </td>
+                                @*<td>@Html.CheckBox("IsCompleted", false)</td>*@
+                            </tr>
+                        </table>
+                        <div>
+                            <input class="submit-button" type="Submit" , value="Add" />
+                        </div>
+                    </div>
+                }
+            </div>
+            <div>
+                <h2>Active tasks: </h2>
+            </div>
+            <div>
+                <table>
+                    <tr>
+                        <th>Title</th>
+                        <th>Description</th>
+                        <th>Due Date</th>
+                        <th>Is Completed</th>
+                    </tr>
+                    @foreach (var ti in Model)
+                    {
+                        <tr>
+                            <td>@ti.Title</td>
+                            <td>@ti.Description</td>
+                            <td>@ti.DueDate</td>
+                            <td>@ti.IsCompleted</td>
+                        </tr>
+                    }
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <footer></footer>
+</body>
+</html>

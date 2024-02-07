@@ -1,0 +1,17 @@
+﻿input[type="text"] {
+    border: 1px solid;
+    padding: 1rem, 2rem;
+}
+
+.submit-button {
+    background-color: antiquewhite;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+}
+
+.submit-button:hover {
+    background-color: peachpuff;
+    padding: 1rem 2rem;
+    border-radius: 0.5rem;
+    transition: 0.1s all ease-in-out;
+}
