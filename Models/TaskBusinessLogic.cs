@@ -1,7 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 
 namespace ToDoApplication.Models
 {
@@ -17,7 +15,7 @@ namespace ToDoApplication.Models
         };
 
         /// <summary>
-        /// This methods adds a task to the list and returns a boolean value
+        /// This method adds a task to the list and returns a boolean value
         /// indicating whether the task was added or not
         /// </summary>
         /// <param name="task"></param>

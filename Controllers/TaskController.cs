@@ -1,7 +1,4 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
 using System.Web.Mvc;
 using ToDoApplication.Models;
 
@@ -24,13 +21,6 @@ namespace ToDoApplication.Controllers
             TaskBusinessLogic tbl = new TaskBusinessLogic();
 
             TaskItem ti = new TaskItem(Title, Description, DueDate, false);
-            //TaskItem ti = new TaskItem();
-
-            //ti.Id = Id;
-            //ti.Title = Title;
-            //ti.Description = Description;
-            //ti.DueDate = DueDate;
-            //ti.IsCompleted = false;
 
             if (tbl.AddTask(ti))
             {
@@ -39,14 +29,5 @@ namespace ToDoApplication.Controllers
 
             return null;
         }
-
-        //public ActionResult DisplayTasks()
-        //{
-        //    TaskBusinessLogic tbl = new TaskBusinessLogic();
-
-        //    var tasks = tbl.GetTaskItems();
-
-        //    return View(tasks);
-        //}
     }
 }

@@ -9,9 +9,26 @@
     border-radius: 0.5rem;
 }
 
-.submit-button:hover {
-    background-color: peachpuff;
-    padding: 1rem 2rem;
-    border-radius: 0.5rem;
-    transition: 0.1s all ease-in-out;
+    .submit-button:hover {
+        background-color: peachpuff;
+        padding: 1rem 2rem;
+        border-radius: 0.5rem;
+        transition: 0.1s all ease-in-out;
+    }
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr;
+    place-items: center;
+    place-content: center;
+    text-align: center;
+}
+
+.form-container {
+    text-align: left;
+}
+
+.text-input {
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem
 }
